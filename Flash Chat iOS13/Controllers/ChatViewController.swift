@@ -17,11 +17,7 @@ class ChatViewController: UIViewController {
     
     let db = Firestore.firestore()
     
-    var messages: [Message] = [
-        Message(sender: "Alice", body: "Hello"),
-        Message(sender: "Bob", body: "Yo"),
-        Message(sender: "Alice", body: "Let's go")
-    ]
+    var messages: [Message] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +34,9 @@ class ChatViewController: UIViewController {
     }
     
     func loadMessages() {
-        db.collection(K.FStore.collectionName).addSnapshotListener() { (querySnapshot, error) in
+        db.collection(K.FStore.collectionName)
+            .order(by: K.FStore.dateField)
+            .addSnapshotListener() { (querySnapshot, error) in
             self.messages = [] // don't append duplicate messages
             if let e = error {
                 print("There's an error loading data from Firestore. \(e)")
@@ -62,7 +60,8 @@ class ChatViewController: UIViewController {
             db.collection(K.FStore.collectionName).addDocument(
                 data: [
                     K.FStore.senderField: messageSender,
-                    K.FStore.bodyField: messageBody
+                    K.FStore.bodyField: messageBody,
+                    K.FStore.dateField: Date().timeIntervalSince1970
                 ]) { (error) in
                     if let e = error {
                         print("There was an issue saving data to firestore, \(e)")
