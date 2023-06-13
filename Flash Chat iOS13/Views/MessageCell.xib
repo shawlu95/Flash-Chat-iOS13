@@ -22,7 +22,7 @@
                         <rect key="frame" x="10" y="10" width="482" height="61"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aDq-ZA-pwn">
-                                <rect key="frame" x="0.0" y="11" width="422" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="422" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXi-tE-wdB">
                                         <rect key="frame" x="10" y="10" width="402" height="30"/>
@@ -33,31 +33,27 @@
                                 </subviews>
                                 <color key="backgroundColor" name="BrandPurple"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="rXi-tE-wdB" secondAttribute="bottom" constant="10" id="GvJ-Nk-7k4"/>
-                                    <constraint firstAttribute="trailing" secondItem="rXi-tE-wdB" secondAttribute="trailing" constant="10" id="Npo-an-79w"/>
-                                    <constraint firstItem="rXi-tE-wdB" firstAttribute="leading" secondItem="aDq-ZA-pwn" secondAttribute="leading" constant="10" id="Sme-dZ-Waq"/>
-                                    <constraint firstItem="rXi-tE-wdB" firstAttribute="top" secondItem="aDq-ZA-pwn" secondAttribute="top" constant="10" id="mkL-Vb-yxP"/>
+                                    <constraint firstItem="rXi-tE-wdB" firstAttribute="leading" secondItem="aDq-ZA-pwn" secondAttribute="leading" constant="10" id="UgN-j6-acQ"/>
+                                    <constraint firstItem="rXi-tE-wdB" firstAttribute="top" secondItem="aDq-ZA-pwn" secondAttribute="top" constant="10" id="jej-vw-hEs"/>
+                                    <constraint firstAttribute="bottom" secondItem="rXi-tE-wdB" secondAttribute="bottom" constant="10" id="wI5-in-1uq"/>
+                                    <constraint firstAttribute="trailing" secondItem="rXi-tE-wdB" secondAttribute="trailing" constant="10" id="xrK-HI-T39"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="9uP-VZ-6WR">
-                                <rect key="frame" x="442" y="11" width="40" height="40"/>
+                                <rect key="frame" x="442" y="0.0" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Bv0-yh-7Y8"/>
-                                    <constraint firstAttribute="width" constant="40" id="UjR-qn-2eO"/>
+                                    <constraint firstAttribute="width" constant="40" id="5bO-6w-UlK"/>
+                                    <constraint firstAttribute="height" constant="40" id="kK0-Co-MeI"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <constraints>
-                            <constraint firstItem="aDq-ZA-pwn" firstAttribute="top" secondItem="VM0-S1-Cp5" secondAttribute="top" constant="10" id="HmX-Sa-8jq"/>
-                        </constraints>
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="VM0-S1-Cp5" secondAttribute="bottom" constant="10" id="6j9-1I-7z8"/>
-                    <constraint firstItem="VM0-S1-Cp5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="7mW-CW-8wU"/>
-                    <constraint firstAttribute="trailing" secondItem="VM0-S1-Cp5" secondAttribute="trailing" constant="10" id="FoX-VW-YEl"/>
-                    <constraint firstItem="VM0-S1-Cp5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="IgV-Oh-mOa"/>
-                    <constraint firstItem="VM0-S1-Cp5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="n51-3O-NZS"/>
+                    <constraint firstAttribute="bottom" secondItem="VM0-S1-Cp5" secondAttribute="bottom" constant="10" id="51c-rp-hAm"/>
+                    <constraint firstAttribute="trailing" secondItem="VM0-S1-Cp5" secondAttribute="trailing" constant="10" id="5BM-1i-R9z"/>
+                    <constraint firstItem="VM0-S1-Cp5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="7Bq-yD-1Io"/>
+                    <constraint firstItem="VM0-S1-Cp5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="OY9-Vo-L3I"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
